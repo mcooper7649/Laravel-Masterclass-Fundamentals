@@ -13,6 +13,17 @@ Route::get('/profile', function (Request $request) {
     return "PROFILE";
 });
 
+Route::get('/{id}/{status}', function ($id, $status) {
+    return $status;
+});
+
+//optional parameter routes have a ?
+
+Route::get('/{id?}', function (?int $id = null) {
+    return $id;
+});
+
+
 // Route::get('/user', 'CONTROLLER', 'METHOD');
 // Route::get('/posts', 'CONTROLLER', 'METHOD');
 // Route::get('/categories', 'CONTROLLER', 'METHOD');
